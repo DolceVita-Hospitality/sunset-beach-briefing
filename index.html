@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunset Beach Resort — Operational Feasibility Briefing | DolceVita Hospitality</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+  :root {
+    --dv-dark: #0a252b;
+    --dv-accent: #c9a96e;
+    --dv-accent-light: #e2d2b9;
+    --dv-bg: #fafaf8;
+    --dv-white: #ffffff;
+    --dv-text: #2c2c2c;
+    --dv-text-light: #6b6b6b;
+    --dv-border: #e8e4de;
+    --dv-red: #c0392b;
+    --dv-green: #1a7a4c;
+    --dv-blue: #1a5276;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4 landscape;
+    margin: 28mm 18mm 22mm 18mm;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 13.5px;
+    line-height: 1.65;
+    color: var(--dv-text);
+    background: var(--dv-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .document-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--dv-white);
+    box-shadow: 0 0 60px rgba(10,37,43,0.08);
+  }
+
+  /* ─── HEADER ─── */
+  .doc-header {
+    background: var(--dv-dark);
+    padding: 36px 52px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .doc-header .logo svg {
+    height: 48px;
+    width: auto;
+  }
+  .doc-header .logo svg .cls-1 { fill: var(--dv-accent-light); }
+  .doc-header .header-label {
+    color: var(--dv-accent-light);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+    line-height: 1.7;
+  }
+
+  /* ─── TITLE BLOCK ─── */
+  .title-block {
+    background: linear-gradient(135deg, var(--dv-dark) 0%, #0f3740 100%);
+    padding: 56px 52px 48px;
+    color: var(--dv-white);
+    page-break-after: always;
+  }
+  .title-block h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+  .title-block .subtitle {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--dv-accent-light);
+    margin-bottom: 32px;
+    letter-spacing: 0.3px;
+  }
+  .title-block .meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    border-top: 1px solid rgba(226,210,185,0.2);
+    padding-top: 28px;
+  }
+  .title-block .meta-item label {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--dv-accent);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .title-block .meta-item span {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.9);
+  }
+  .title-block .confidential {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 6px 16px;
+    border: 1px solid var(--dv-accent);
+    color: var(--dv-accent);
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ─── CONTENT ─── */
+  .content {
+    padding: 44px 52px;
+  }
+
+  /* ─── SECTION HEADINGS ─── */
+  h2.section-number {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--dv-dark);
+    margin-top: 48px;
+    margin-bottom: 6px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--dv-dark);
+    page-break-before: auto;
+    letter-spacing: -0.2px;
+  }
+  h2.section-number:first-child { margin-top: 0; }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dv-dark);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    letter-spacing: -0.1px;
+  }
+  h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dv-dark);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 14px; }
+
+  strong { font-weight: 600; }
+
+  /* ─── KEY METRICS STRIP ─── */
+  .metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin: 24px 0;
+    border: 1px solid var(--dv-border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .metric-card {
+    padding: 18px 16px;
+    text-align: center;
+    border-right: 1px solid var(--dv-border);
+  }
+  .metric-card:last-child { border-right: none; }
+  .metric-card .value {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--dv-red);
+  }
+  .metric-card .value.green { color: var(--dv-green); }
+  .metric-card .value.blue { color: var(--dv-blue); }
+  .metric-card .label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dv-text-light);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* ─── TABLES ─── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px;
+    font-size: 12.5px;
+  }
+  thead th {
+    background: var(--dv-dark);
+    color: var(--dv-white);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--dv-border);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) { background: #faf9f6; }
+  tbody tr:hover { background: #f4f1ec; }
+
+  .highlight-row td { background: rgba(201,169,110,0.1) !important; font-weight: 600; }
+  .danger-row td { background: rgba(192,57,43,0.06) !important; }
+
+  /* ─── LISTS ─── */
+  ul, ol {
+    margin: 10px 0 16px 20px;
+  }
+  li { margin-bottom: 5px; }
+
+  /* ─── CALLOUT BOXES ─── */
+  .callout {
+    padding: 18px 22px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-size: 13px;
+  }
+  .callout-insight {
+    background: #f0f7f4;
+    border-left: 4px solid var(--dv-green);
+  }
+  .callout-warning {
+    background: #fdf3f0;
+    border-left: 4px solid var(--dv-red);
+  }
+  .callout-strategy {
+    background: #f0f4f7;
+    border-left: 4px solid var(--dv-blue);
+  }
+  .callout-gold {
+    background: linear-gradient(135deg, #faf6f0, #f7f2e8);
+    border-left: 4px solid var(--dv-accent);
+  }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 12px; letter-spacing: 0.5px; }
+
+  /* ─── PHASE HEADERS ─── */
+  .phase-header {
+    background: var(--dv-dark);
+    color: var(--dv-white);
+    padding: 14px 22px;
+    border-radius: 5px;
+    margin: 32px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .phase-header .phase-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--dv-accent);
+    line-height: 1;
+  }
+  .phase-header .phase-info h4 {
+    color: var(--dv-white);
+    font-size: 14px;
+    margin: 0 0 2px;
+    letter-spacing: 0.5px;
+  }
+  .phase-header .phase-info span {
+    font-size: 11px;
+    color: var(--dv-accent-light);
+    font-weight: 300;
+  }
+
+  /* ─── QUICK WIN CARDS ─── */
+  .qw-card {
+    border: 1px solid var(--dv-border);
+    border-radius: 6px;
+    margin: 18px 0;
+    overflow: hidden;
+  }
+  .qw-card-header {
+    background: var(--dv-dark);
+    color: var(--dv-white);
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 13.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .qw-card-header .qw-impact {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  .qw-impact-extreme { background: var(--dv-accent); color: var(--dv-dark); }
+  .qw-impact-high { background: rgba(201,169,110,0.5); color: var(--dv-dark); }
+  .qw-impact-medium { background: rgba(255,255,255,0.15); color: var(--dv-accent-light); }
+  .qw-card-body {
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 12.5px;
+  }
+  .qw-card-body .qw-field label,
+  .qw-card-body .qw-desc label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--dv-text-light);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .qw-card-body .qw-desc { grid-column: 1 / -1; }
+
+  /* ─── TALKING POINTS ─── */
+  .tp-box {
+    background: linear-gradient(135deg, var(--dv-dark), #0f3740);
+    color: var(--dv-white);
+    padding: 32px 36px;
+    border-radius: 6px;
+    margin: 24px 0;
+  }
+  .tp-box h4 {
+    color: var(--dv-accent);
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .tp-box p, .tp-box li {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .tp-box strong { color: var(--dv-accent-light); }
+  .tp-box .tp-number {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: var(--dv-accent);
+    color: var(--dv-dark);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  .tp-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .tp-item p { margin: 0; }
+
+  /* ─── SYNERGY MATRIX ─── */
+  .synergy-strong { color: var(--dv-green); font-weight: 600; }
+  .synergy-moderate { color: var(--dv-accent); font-weight: 500; }
+  .synergy-low { color: var(--dv-text-light); }
+
+  /* ─── BEFORE/AFTER ─── */
+  .ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 20px 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--dv-border);
+  }
+  .ba-col-header {
+    padding: 10px 16px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+  }
+  .ba-before-header { background: #e8e4de; color: var(--dv-text-light); }
+  .ba-after-header { background: var(--dv-dark); color: var(--dv-accent); }
+  .ba-cell {
+    padding: 12px 16px;
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--dv-border);
+  }
+  .ba-before { background: #faf9f6; color: var(--dv-text-light); }
+  .ba-after { background: #f0f7f4; color: var(--dv-dark); font-weight: 500; }
+
+  /* ─── DIVIDERS ─── */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--dv-border);
+    margin: 40px 0;
+  }
+
+  /* ─── FOOTER ─── */
+  .doc-footer {
+    background: var(--dv-dark);
+    padding: 28px 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .doc-footer .footer-logo svg {
+    height: 32px;
+    width: auto;
+  }
+  .doc-footer .footer-logo svg .cls-1 { fill: var(--dv-accent-light); }
+  .doc-footer .footer-text {
+    color: rgba(226,210,185,0.6);
+    font-size: 10px;
+    line-height: 1.7;
+    text-align: right;
+  }
+
+  /* ─── PRINT ─── */
+  @media print {
+    body { background: white; }
+    .document-wrapper { box-shadow: none; max-width: 100%; }
+    .content { padding: 28px 32px; }
+    h2.section-number { page-break-before: auto; }
+    .phase-header, .tp-box, .qw-card { break-inside: avoid; }
+    table { break-inside: auto; }
+    tr { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<div class="document-wrapper">
+
+  <!-- ═══════════ HEADER ═══════════ -->
+  <header class="doc-header">
+    <div class="logo">
+      <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.17 421.28">
+        <g id="Layer_1-2" data-name="Layer 1">
+          <g>
+            <path class="cls-1" d="M151.31,349.51h-.18c-27.92.03-43.94,13.1-43.94,35.88s16.04,35.88,44.03,35.88,44.02-13.08,44.02-35.88-16.01-35.85-43.93-35.88ZM151.22,412.1c-19.75,0-32.5-10.48-32.5-26.71s12.75-26.52,32.5-26.52,32.15,10.41,32.15,26.52-12.32,26.71-32.15,26.71Z"/>
+            <polygon class="cls-1" points="284.16 411.17 235.94 411.17 235.94 350.98 224.77 350.98 224.77 419.82 233.86 419.86 284.16 419.86 284.16 411.17"/>
+            <path class="cls-1" d="M351.24,358.72c17.9,0,25.05,7.94,27.85,15.13h11.34c-2.75-15.49-16.88-24.32-39.14-24.34h-.14c-27.62.03-44.11,13.51-44.11,36.06s16.12,35.71,44.2,35.71c22.56,0,36.36-8.45,39.14-23.86h-11.33c-2.81,7.13-9.96,15.01-27.81,15.01-20.43,0-32.63-10.04-32.63-26.86s12.2-26.85,32.63-26.85Z"/>
+            <polygon class="cls-1" points="550.89 413.55 524.77 350.98 512.39 350.98 542.77 419.81 559 419.81 589.11 350.98 577.01 350.98 550.89 413.55"/>
+            <polygon class="cls-1" points="776.56 350.98 746.45 419.82 758.55 419.82 784.68 357.23 810.79 419.82 823.17 419.82 792.78 350.98 776.56 350.98"/>
+            <rect class="cls-1" x="618.02" y="350.98" width="11.17" height="68.83"/>
+            <polygon class="cls-1" points="687.94 419.81 699.11 419.81 699.11 366.27 687.94 377.44 687.94 419.81"/>
+            <polygon class="cls-1" points="657.11 359.84 692.27 359.84 700.22 359.84 702.89 359.84 716.23 359.84 729.94 359.84 729.94 350.98 657.11 350.98 657.11 359.84"/>
+            <path class="cls-1" d="M39.65,350.98H0v9.18h39.29c24.44,0,29.56,13.59,29.56,25,0,9.51-3.84,25.46-29.56,25.46H11.17v-44.03l-11.17,11.17v42.05h39.65c25.84,0,40.66-12.63,40.66-34.65s-13.68-34.18-40.66-34.18Z"/>
+            <polygon class="cls-1" points="431.42 399.84 431.42 389.74 487.33 389.74 487.33 381.05 431.42 381.05 431.42 359.66 487.33 359.66 487.33 350.98 431.42 350.98 420.25 350.98 420.25 419.82 487.47 419.82 487.47 411.13 431.42 411.13 431.42 399.84"/>
+            <polygon class="cls-1" points="388.33 188.04 303.66 130.5 303.66 172.51 357.42 209.04 388.33 188.04"/>
+            <polygon class="cls-1" points="503.57 109.34 503.57 67.33 411.58 129.85 319.6 67.33 319.6 109.34 411.58 171.86 503.57 109.34"/>
+            <polygon class="cls-1" points="476.32 54.1 476.32 12.09 411.58 56.09 346.84 12.09 346.84 54.1 411.59 98.1 476.32 54.1"/>
+            <polygon class="cls-1" points="519.51 172.51 519.51 130.5 434.84 188.04 465.74 209.04 519.51 172.51"/>
+            <polygon class="cls-1" points="442.48 224.85 411.58 203.84 380.68 224.85 411.59 245.85 442.48 224.85"/>
+            <polygon class="cls-1" points="425.45 17.27 411.58 0 397.72 17.27 411.58 26.7 425.45 17.27"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <div class="header-label">Investment Advisory<br>Hospitality Division</div>
+  </header>
+
+  <!-- ═══════════ TITLE BLOCK ═══════════ -->
+  <section class="title-block">
+    <h1>Sunset Beach Resort<br>Marina & Spa</h1>
+    <div class="subtitle">Operational Feasibility & Market Perception Briefing</div>
+    <div class="meta-grid">
+      <div class="meta-item">
+        <label>Asset</label>
+        <span>Sunset Beach Resort Marina & Spa, Al Khobar, KSA</span>
+      </div>
+      <div class="meta-item">
+        <label>Owner</label>
+        <span>FAMA Holdings (est. 1994)</span>
+      </div>
+      <div class="meta-item">
+        <label>Date</label>
+        <span>March 2026</span>
+      </div>
+      <div class="meta-item">
+        <label>Classification</label>
+        <span>Confidential &mdash; Investment Grade</span>
+      </div>
+    </div>
+    <div class="confidential">Confidential</div>
+  </section>
+
+  <!-- ═══════════ CONTENT ═══════════ -->
+  <div class="content">
+
+    <!-- ───── 1. EXECUTIVE SUMMARY ───── -->
+    <h2 class="section-number">1. Executive Summary</h2>
+
+    <p>Sunset Beach Resort Marina & Spa sits on one of the most irreplaceable pieces of coastal real estate in the Eastern Province &mdash; a private peninsula with 360-degree waterfront access, marina, and direct proximity to Bahrain via King Fahd Causeway. The asset's physical DNA is exceptional. Its operational performance is not.</p>
+
+    <div class="metrics-strip">
+      <div class="metric-card">
+        <div class="value">6.8<span style="font-size:14px">/10</span></div>
+        <div class="label">Booking.com</div>
+      </div>
+      <div class="metric-card">
+        <div class="value">3.0<span style="font-size:14px">/5</span></div>
+        <div class="label">TripAdvisor</div>
+      </div>
+      <div class="metric-card">
+        <div class="value">#41</div>
+        <div class="label">of 110 Hotels</div>
+      </div>
+      <div class="metric-card">
+        <div class="value blue">SAR 1,100</div>
+        <div class="label">ADR / Night</div>
+      </div>
+    </div>
+
+    <div class="callout callout-warning">
+      <strong>THE GAP</strong>
+      The resort charges luxury prices but delivers a mid-tier experience. Guests consistently report outdated furniture, poor bedding, unavailable amenities, weak F&B, and inconsistent service. Meanwhile, competitors like Grand Hyatt Al Khobar (8.9/10, 4,616 reviews) and M&ouml;venpick (8.6/10) operate at significantly higher satisfaction levels at similar or lower price points.
+    </div>
+
+    <div class="callout callout-insight">
+      <strong>THE OPPORTUNITY</strong>
+      An operations-first intervention can realistically move the Booking.com score from 6.8 to 8.0+ within 9&ndash;12 months, increase occupancy by 15&ndash;25 percentage points, and demonstrate to investors and future development partners that this asset has a viable commercial engine &mdash; not just a beautiful location. Critically, it provides the real operational data needed to size any future investment accurately and with confidence.
+    </div>
+
+    <div class="callout callout-strategy">
+      <strong>CORE RECOMMENDATION</strong>
+      Deploy an operational rejuvenation program led by <strong>Sophos Hotels</strong> (systems, governance, revenue management) and <strong>DolceVita Hospitality</strong> (guest experience, service culture, brand positioning) as the "Phase 0" preceding any CAPEX-intensive redevelopment.
+    </div>
+
+    <div class="callout callout-gold">
+      <strong>WHY OPERATIONS FIRST &mdash; NOT SAR 2.26B FIRST</strong>
+      Committing SAR 2.26B to a full redevelopment based on assumptions &mdash; without first understanding the asset's true demand profile, operational dynamics, and revenue ceiling &mdash; is the highest-risk path. A 9&ndash;12 month operational management phase achieves three things: <strong>(1)</strong> it provides real performance data to size the investment accurately &mdash; perhaps SAR 2.26B is not needed, perhaps less achieves the same result; <strong>(2)</strong> it raises the asset's brand reputation and market position, so any future investment starts from strength, not weakness; <strong>(3)</strong> it places operators who deeply understand the property at the center of the future investment plan &mdash; replacing consultant assumptions with first-hand operational knowledge.
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 2. OWNER DECK ANALYSIS ───── -->
+    <h2 class="section-number">2. Owner Deck Analysis</h2>
+
+    <h3>2.1 Investment Teaser Summary (November 2025)</h3>
+    <p>The FAMA Holdings investment deck positions Sunset Beach as a <strong>"Redevelopment and Expansion Plan"</strong> with a two-track strategy:</p>
+
+    <table>
+      <thead><tr><th>Element</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Location</strong></td><td>10 km from Al Khobar city center; close to Bahrain (King Fahd Causeway 7&ndash;9 km); 4-hour drive from Riyadh</td></tr>
+        <tr><td><strong>Land</strong></td><td>Private peninsula, secluded waterfront with private beach</td></tr>
+        <tr><td><strong>Historical Identity</strong></td><td>GCC pioneer &mdash; one of the first luxury resorts in the region (1970s). Phase II in 1990s elevated to luxury gated community. Phase III (future) envisioned as ultimate lifestyle destination.</td></tr>
+        <tr><td><strong>Two-Track Strategy</strong></td><td><strong>Track 1:</strong> Luxury Asset Enhancement (transforming existing properties)<br><strong>Track 2:</strong> Luxury Developments (new world-class residences and hospitality)</td></tr>
+        <tr><td><strong>Masterplan Components</strong></td><td>Residential villas, apartments & penthouses; Leisure & retail; Hospitality & services</td></tr>
+        <tr><td><strong>Identity Pillars</strong></td><td>Exclusivity, Privacy, Personalization, Curated Living, Prestige, Openness</td></tr>
+        <tr><td><strong>Target Market</strong></td><td>Saudi HNWIs (185,325 HNWIs, 1,202 UHNWIs projected 2027); Corporate/Aramco executives; International residential buyers</td></tr>
+        <tr><td><strong>Vision 2030</strong></td><td>Tourism contribution to GDP; Quality of Life Program; private sector development</td></tr>
+      </tbody>
+    </table>
+
+    <h3>2.2 Financial Assumptions (from Deck)</h3>
+    <table>
+      <thead><tr><th>Metric</th><th>Assumption</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Target Villa Pricing</strong></td><td>SAR 47,000/sqm (~8&ndash;9x Eastern Province average of SAR 5,620/sqm)</td></tr>
+        <tr><td><strong>Target Apartment Pricing</strong></td><td>SAR 34,700/sqm</td></tr>
+        <tr><td><strong>Hotel ADR Target</strong></td><td>SAR 800/night (40-key boutique wellness hotel)</td></tr>
+        <tr><td><strong>Hotel Occupancy Target</strong></td><td>60&ndash;70%</td></tr>
+        <tr><td><strong>Total Investment</strong></td><td>SAR 2,264M across full masterplan</td></tr>
+        <tr><td><strong>Benchmarks</strong></td><td>Diriyah (SAR 32,115/sqm), Red Sea (SAR 52,230/sqm), Al Mouj Muscat, The Pearl Qatar, Saadiyat Island</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-warning">
+      <strong>CRITICAL OBSERVATION</strong>
+      The deck focuses almost entirely on the future redevelopment vision &mdash; renders, masterplan, residential pricing benchmarks, and macro market data. It does <strong>not</strong> address the current operational state of the existing resort. More critically, a SAR 2.26B investment plan built on market assumptions &mdash; without operational validation &mdash; carries unnecessary risk. The smarter approach: manage the asset for 9&ndash;12 months, understand its real performance ceiling, and <em>then</em> design the investment plan with confidence and first-hand data.
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 3. ONLINE FOOTPRINT INVENTORY ───── -->
+    <h2 class="section-number">3. Online Footprint Inventory</h2>
+
+    <h3>3.1 Digital Presence Map</h3>
+    <table>
+      <thead><tr><th>Platform</th><th>Status</th><th>Rating</th><th>Reviews</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Google Maps</strong></td><td>Active listing</td><td>~4.0/5</td><td>Moderate</td><td>Sunset Boulevard, Al Tahliyah, Al Khobar 34713</td></tr>
+        <tr class="danger-row"><td><strong>Booking.com</strong></td><td>Active, bookable</td><td><strong>6.8/10</strong></td><td><strong>197</strong></td><td>"Pleasant" &mdash; critically below the 7.5 threshold</td></tr>
+        <tr class="danger-row"><td><strong>TripAdvisor</strong></td><td>Active listing</td><td><strong>3.0/5</strong></td><td>15</td><td>Ranked <strong>#41 of 110</strong> hotels in Al Khobar</td></tr>
+        <tr><td><strong>Trivago</strong></td><td>Aggregated</td><td>8.3/10</td><td>3,706</td><td>Higher due to aggregation methodology</td></tr>
+        <tr><td><strong>MakeMyTrip</strong></td><td>Listed</td><td>3.4/5</td><td>197</td><td>"Good" designation</td></tr>
+        <tr><td><strong>Website</strong></td><td>sunset-beach.com.sa</td><td>N/A</td><td>N/A</td><td>Active; (+966) 013 890 2000</td></tr>
+        <tr><td><strong>Instagram</strong></td><td>@sunsetbeachalkhobar</td><td>N/A</td><td>N/A</td><td>34K followers, 1,212 posts</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.2 First Impression Diagnosis</h3>
+    <p><strong>What a potential guest sees when searching "Sunset Beach Resort Al Khobar":</strong></p>
+    <ol>
+      <li><strong>Booking.com 6.8 score</strong> &mdash; This is the KILL POINT. Most quality-conscious travelers filter for 7.5+ or 8.0+. A 6.8 actively repels mid-to-high-end guests.</li>
+      <li><strong>TripAdvisor #41 of 110</strong> &mdash; A 5-star resort ranked in the bottom half of ALL hotels (including budget properties) is a red flag.</li>
+      <li><strong>Price ~SAR 1,100/night + SAR 1,000 cash deposit</strong> &mdash; The deposit requirement is unusual and creates immediate friction/distrust.</li>
+      <li><strong>Water Park closed Nov&ndash;May</strong> &mdash; A major amenity offline for 6 months, yet pricing doesn't adjust proportionally.</li>
+      <li><strong>"5-star marketed, 3-star delivered"</strong> &mdash; The most damaging perception, repeated across platforms.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <!-- ───── 4. REPUTATION INTELLIGENCE ───── -->
+    <h2 class="section-number">4. Reputation Intelligence: Top 10 Review Themes</h2>
+
+    <p>Based on synthesis of Booking.com (197 reviews), TripAdvisor (15 reviews), Google Maps, and aggregator platforms:</p>
+
+    <h3>Negative Themes (by frequency)</h3>
+    <table>
+      <thead><tr><th>#</th><th>Theme</th><th>Frequency</th><th>Severity</th><th>Sample Evidence</th></tr></thead>
+      <tbody>
+        <tr class="danger-row"><td>1</td><td><strong>Outdated rooms & furniture</strong></td><td>Very High</td><td>Critical</td><td>"Marketed as 5-star but feels like 3-star"</td></tr>
+        <tr class="danger-row"><td>2</td><td><strong>Poor bedding & sleep quality</strong></td><td>High</td><td>Critical</td><td>"Poor bedding, mattress, and pillows that caused discomfort"</td></tr>
+        <tr class="danger-row"><td>3</td><td><strong>Unavailable amenities</strong></td><td>High</td><td>Critical</td><td>"Jet Ski, Jacuzzi, Golf Cart, Family Pool &mdash; all unavailable"</td></tr>
+        <tr><td>4</td><td><strong>Overpriced / value mismatch</strong></td><td>High</td><td>High</td><td>"Price should be 20% lower"; SAR 1,000 cash deposit "unusual"</td></tr>
+        <tr><td>5</td><td><strong>Weak F&B / breakfast</strong></td><td>Medium-High</td><td>High</td><td>"Breakfast described as a disaster"</td></tr>
+        <tr><td>6</td><td><strong>Poor reception / service</strong></td><td>Medium</td><td>High</td><td>"Bad customer service at reception"</td></tr>
+        <tr><td>7</td><td><strong>Maintenance & cleanliness</strong></td><td>Medium</td><td>High</td><td>"Mosquitoes in the patio area"</td></tr>
+        <tr><td>8</td><td><strong>Small room sizes</strong></td><td>Medium</td><td>Medium</td><td>Rooms not proportionate to price or star rating</td></tr>
+        <tr><td>9</td><td><strong>Limited activities</strong></td><td>Low-Med</td><td>Medium</td><td>Amenity list impressive on paper, many unavailable</td></tr>
+        <tr><td>10</td><td><strong>Pest issues</strong></td><td>Low</td><td>High</td><td>Mosquitoes preventing outdoor evening use</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Positive Themes</h3>
+    <table>
+      <thead><tr><th>#</th><th>Theme</th><th>Frequency</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>Location & private beach</strong></td><td>Very High</td><td>Universally praised &mdash; the asset's core strength</td></tr>
+        <tr><td>2</td><td><strong>Peaceful / serene setting</strong></td><td>High</td><td>"Perfect for family getaways"</td></tr>
+        <tr><td>3</td><td><strong>Marina & waterfront views</strong></td><td>Medium</td><td>Unique in Al Khobar market</td></tr>
+        <tr><td>4</td><td><strong>Resort compound scale</strong></td><td>Medium</td><td>Large property creates sense of exclusivity</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-insight">
+      <strong>CRITICAL INSIGHT</strong>
+      The positive themes are all <strong>LOCATION-DRIVEN</strong> (inherent to the asset). The negative themes are all <strong>OPERATIONS-DRIVEN</strong> (fixable without CAPEX). This is the strongest evidence for the "operations first" thesis.
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 5. COMPETITIVE BENCHMARK ───── -->
+    <h2 class="section-number">5. Competitive Benchmark</h2>
+
+    <h3>5.1 Al Khobar & Eastern Province</h3>
+    <table>
+      <thead><tr><th>Property</th><th style="text-align:center">&#9733;</th><th>Booking.com</th><th>TripAdvisor</th><th>ADR (SAR)</th><th>Keys</th><th>Beach</th><th>Marina</th></tr></thead>
+      <tbody>
+        <tr><td>Grand Hyatt Al Khobar</td><td style="text-align:center">5</td><td><strong>8.9/10</strong> (4,616)</td><td>4.0/5 (#6)</td><td>680&ndash;1,500</td><td>~240</td><td>No</td><td>No</td></tr>
+        <tr><td>M&ouml;venpick Al Khobar</td><td style="text-align:center">5</td><td><strong>8.6/10</strong></td><td>4.0/5 (#9)</td><td>475&ndash;900</td><td>143</td><td>No</td><td>No</td></tr>
+        <tr><td>Sofitel Al Khobar</td><td style="text-align:center">5</td><td><strong>7.8/10</strong> (3,046)</td><td>4.0/5 (#11)</td><td>525&ndash;630</td><td>~200</td><td>No</td><td>No</td></tr>
+        <tr><td>Sheraton Dammam</td><td style="text-align:center">5</td><td>~8.2/10</td><td>4.0/5 (#5)</td><td>375&ndash;750</td><td>283</td><td>No</td><td>No</td></tr>
+        <tr><td>Dana Beach Resort</td><td style="text-align:center">4</td><td>~7.8/10</td><td>4.0/5 (#25)</td><td>450&ndash;900</td><td>~175</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Braira Al-Azizyah</td><td style="text-align:center">4</td><td>~8.0/10</td><td>3.0/5 (#39)</td><td>380&ndash;700</td><td>~100</td><td>No</td><td>No</td></tr>
+        <tr class="highlight-row"><td><strong>SUNSET BEACH</strong></td><td style="text-align:center"><strong>5</strong></td><td><strong>6.8/10 (197)</strong></td><td><strong>3.0/5 (#41)</strong></td><td><strong>~1,100</strong></td><td><strong>40</strong></td><td><strong>Yes</strong></td><td><strong>Yes</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-warning">
+      <strong>KEY TAKEAWAY</strong>
+      Sunset Beach has the <strong>highest price</strong> and the <strong>lowest satisfaction score</strong> among all competitors. It also has the fewest reviews on Booking.com (197 vs. Grand Hyatt's 4,616), indicating critically low booking volume through OTA channels.
+    </div>
+
+    <h3>5.2 Bahrain Weekend Escape Competitors</h3>
+    <table>
+      <thead><tr><th>Property</th><th>Stars</th><th>Booking.com</th><th>ADR (SAR)</th><th>Keys</th><th>Beach</th></tr></thead>
+      <tbody>
+        <tr><td>Four Seasons Bahrain Bay</td><td>5-Lux</td><td><strong>9.3/10</strong> (3,315)</td><td>1,250&ndash;2,450</td><td>273</td><td>Yes</td></tr>
+        <tr><td>Ritz-Carlton Bahrain</td><td>5-Lux</td><td><strong>8.9/10</strong> (1,574)</td><td>1,100&ndash;2,250</td><td>~255</td><td>Yes</td></tr>
+        <tr><td>Art Rotana Bahrain</td><td>5</td><td>~8.5/10</td><td>525&ndash;1,125</td><td>~315</td><td>Yes</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Strategic Context:</strong> Saudi HNWIs currently cross the King Fahd Causeway to access Bahrain's luxury resorts for weekend getaways. A properly repositioned Sunset Beach can intercept a meaningful portion of this spending on Saudi soil &mdash; eliminating the Causeway crossing and keeping economic activity within KSA.</p>
+
+    <hr class="section-divider">
+
+    <!-- ───── 6. OPERATIONAL REJUVENATION ROADMAP ───── -->
+    <h2 class="section-number">6. Operational Rejuvenation Roadmap</h2>
+
+    <p style="font-size:14px; color: var(--dv-text-light); font-style: italic; margin-bottom: 28px;">Strategic Framework: "Operations First, Renovation Later" &mdash; demonstrate meaningful improvement in guest satisfaction, revenue performance, and asset credibility within 180 days.</p>
+
+    <!-- PHASE 1 -->
+    <div class="phase-header">
+      <div class="phase-num">01</div>
+      <div class="phase-info">
+        <h4>Emergency Stabilization</h4>
+        <span>Days 0&ndash;30</span>
+      </div>
+    </div>
+
+    <h4>6.1 Leadership Reset</h4>
+    <h4>6.2 Service Standards Activation</h4>
+    <h4>6.3 Online Image Refresh</h4>
+    <h4>6.4 Revenue Architecture Correction</h4>
+    <h4>6.5 Review Response Strategy</h4>
+    <h4>6.6 Cleanliness & Readiness Audit</h4>
+
+    <!-- PHASE 2 -->
+    <div class="phase-header">
+      <div class="phase-num">02</div>
+      <div class="phase-info">
+        <h4>Rebuilding The Engine</h4>
+        <span>Days 30&ndash;90</span>
+      </div>
+    </div>
+
+    <h4>6.7 Staff Retraining & Service Culture Program</h4>
+    <h4>6.8 Guest Journey Redesign</h4>
+    <h4>6.9 Package Creation (Corporate, Weekend, Bahrain, Wellness)</h4>
+    <h4>6.10 Upsell Systems</h4>
+    <h4>6.11 Events & Activation Strategy</h4>
+    <h4>6.12 F&B Repositioning</h4>
+
+    <!-- PHASE 3 -->
+    <div class="phase-header">
+      <div class="phase-num">03</div>
+      <div class="phase-info">
+        <h4>Stabilization & Growth</h4>
+        <span>Days 90&ndash;180</span>
+      </div>
+    </div>
+
+    <h4>Targets</h4>
+    <ul>
+      <li>Booking.com score rising to <strong>8.0+</strong> (from 6.8)</li>
+      <li>TripAdvisor ranking improving to <strong>top 20</strong> in Al Khobar</li>
+      <li>Monthly review volume increasing from ~10/month to <strong>25&ndash;30/month</strong></li>
+      <li>Positioning shift: <em>"The Original Eastern Province Resort &mdash; Reimagined"</em></li>
+    </ul>
+
+    <h4>Operational Systems</h4>
+    <ul>
+      <li>Formalize all improvements into written <strong>Standard Operating Procedures</strong></li>
+      <li>Monthly SOP compliance audits</li>
+      <li>Bi-weekly quality committee meetings</li>
+      <li>Monthly mystery guest assessments</li>
+      <li>Weekly online review analysis</li>
+      <li>Daily rate optimization, weekly demand forecasting, monthly channel analysis</li>
+      <li>Launch <strong>Sunset Club</strong> loyalty program (Bronze/Silver/Gold)</li>
+      <li>Build CRM database for personalized marketing and monthly guest newsletters</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <!-- ───── 7. CAPEX-LIGHT QUICK WINS ───── -->
+    <h2 class="section-number">7. CAPEX-Light High-ROI Improvements</h2>
+
+    <p>These interventions deliver outsized guest perception impact relative to their cost. Each is designed to be implemented without structural renovation.</p>
+
+    <!-- QW 1 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.1 Mattress & Sleep Upgrade
+        <span class="qw-impact qw-impact-extreme">Extreme Impact</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Replace all mattresses, pillows, and duvets with premium hospitality-grade products. Add mattress toppers and pillow menu card.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 150,000&ndash;250,000</div>
+        <div class="qw-field"><label>Time to Implement</label>2&ndash;4 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Extreme &mdash; sleep quality is #1 satisfaction driver</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.3 to +0.5 points</div>
+      </div>
+    </div>
+
+    <!-- QW 2 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.2 Bathroom Detailing Refresh
+        <span class="qw-impact qw-impact-high">High Impact</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Replace amenities with branded products (Molton Brown, L'Occitane). Re-grout tiles, replace stained shower screens, install vanity mirrors.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 130,000&ndash;250,000</div>
+        <div class="qw-field"><label>Time to Implement</label>3&ndash;6 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>High &mdash; bathrooms are the second most reviewed area</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.2 to +0.3 points</div>
+      </div>
+    </div>
+
+    <!-- QW 3 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.3 Full Rebranding &amp; Digital Presence
+        <span class="qw-impact qw-impact-extreme">Extreme Impact</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Complete brand identity refresh: new visual identity system, website redesign with direct booking engine, social media strategy &amp; content overhaul, updated OTA profiles with professional photography, new physical collateral (stationery, in-room materials, menus), signage refresh, and PR launch campaign to signal transformation.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 300,000&ndash;500,000</div>
+        <div class="qw-field"><label>Time to Implement</label>6&ndash;10 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Extreme &mdash; signals a new chapter; directly drives booking conversion and first impressions</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.3 to +0.5 points (through perception reset)</div>
+      </div>
+    </div>
+
+    <!-- QW 4 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.4 Beach Experience Redesign
+        <span class="qw-impact qw-impact-extreme">Extreme Impact</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Quality beach loungers, umbrellas, towel service. Add 3&ndash;5 premium cabanas for rent. Beach bar/refresh station. Outdoor showers. Improved sand quality.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 200,000&ndash;400,000</div>
+        <div class="qw-field"><label>Time to Implement</label>4&ndash;8 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Extreme &mdash; beach is the #1 asset and primary booking driver</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.3 to +0.5 points</div>
+      </div>
+    </div>
+
+    <!-- QW 5 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.5 Arrival & Check-in Redesign
+        <span class="qw-impact qw-impact-high">High Impact</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Signature arrival: gate greeting, cold towel + welcome drink, pre-registered key card (&lt;3 min check-in), room escort. Replace SAR 1,000 cash deposit with credit card pre-auth.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 20,000&ndash;50,000</div>
+        <div class="qw-field"><label>Time to Implement</label>1&ndash;2 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>High &mdash; first impression sets tone for entire stay</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.2 to +0.3 points</div>
+      </div>
+    </div>
+
+    <!-- QW 6 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.6 Scent, Sound & Ambiance
+        <span class="qw-impact qw-impact-medium">Medium</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Signature scent diffusion (oud-based or Mediterranean). Curated ambient music. Fresh flower arrangements in lobby and restaurants.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 30,000&ndash;60,000 + SAR 5,000&ndash;10,000/month</div>
+        <div class="qw-field"><label>Time to Implement</label>1&ndash;2 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Creates subconscious luxury cues</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.1 to +0.2 points</div>
+      </div>
+    </div>
+
+    <!-- QW 7 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.7 In-Room Technology Refresh
+        <span class="qw-impact qw-impact-medium">Medium-High</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Smart TVs with streaming (Netflix, Shahid). Fiber-grade WiFi. USB charging at bedside. Functioning, quiet AC in all rooms.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 100,000&ndash;200,000</div>
+        <div class="qw-field"><label>Time to Implement</label>3&ndash;6 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Modern travelers expect connectivity and entertainment</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.2 to +0.3 points</div>
+      </div>
+    </div>
+
+    <!-- QW 8 -->
+    <div class="qw-card">
+      <div class="qw-card-header">
+        7.8 Signage & Wayfinding
+        <span class="qw-impact qw-impact-medium">Medium</span>
+      </div>
+      <div class="qw-card-body">
+        <div class="qw-desc"><label>Description</label>Unified bilingual signage system. Digital info displays in lobby. Clear resort map at check-in.</div>
+        <div class="qw-field"><label>Estimated Cost</label>SAR 40,000&ndash;80,000</div>
+        <div class="qw-field"><label>Time to Implement</label>3&ndash;4 weeks</div>
+        <div class="qw-field"><label>Guest Perception</label>Signals professionalism and care</div>
+        <div class="qw-field"><label>Rating Uplift</label>+0.1 points</div>
+      </div>
+    </div>
+
+    <h3>Total CAPEX-Light Investment Summary</h3>
+    <table>
+      <thead><tr><th>Category</th><th style="text-align:right">Low Estimate (SAR)</th><th style="text-align:right">High Estimate (SAR)</th></tr></thead>
+      <tbody>
+        <tr><td>Sleep upgrade</td><td style="text-align:right">150,000</td><td style="text-align:right">250,000</td></tr>
+        <tr><td>Bathroom refresh</td><td style="text-align:right">130,000</td><td style="text-align:right">250,000</td></tr>
+        <tr><td>Full rebranding &amp; digital</td><td style="text-align:right">300,000</td><td style="text-align:right">500,000</td></tr>
+        <tr><td>Beach redesign</td><td style="text-align:right">200,000</td><td style="text-align:right">400,000</td></tr>
+        <tr><td>Arrival redesign</td><td style="text-align:right">20,000</td><td style="text-align:right">50,000</td></tr>
+        <tr><td>Scent/sound/ambiance</td><td style="text-align:right">30,000</td><td style="text-align:right">60,000</td></tr>
+        <tr><td>In-room technology</td><td style="text-align:right">100,000</td><td style="text-align:right">200,000</td></tr>
+        <tr><td>Signage</td><td style="text-align:right">40,000</td><td style="text-align:right">80,000</td></tr>
+        <tr class="highlight-row"><td><strong>TOTAL</strong></td><td style="text-align:right"><strong>SAR 970,000</strong></td><td style="text-align:right"><strong>SAR 1,790,000</strong></td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-gold">
+      <strong>ROI CONTEXT</strong>
+      At an average investment of ~SAR 1.4M, the projected rating uplift of +1.0 to +1.5 Booking.com points can increase booking conversion rates by 25&ndash;40%, translating to occupancy gains and asset value uplift of SAR 17M&ndash;50M within 12 months &mdash; a 12&ndash;36x return on CAPEX.
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 8. COMMERCIAL UPSIDE ───── -->
+    <h2 class="section-number">8. Commercial Upside Estimation</h2>
+
+    <h3>8.1 Current Performance (Baseline) &mdash; 40 Keys</h3>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Source / Basis</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Room Count</strong></td><td>40 keys</td><td>Property data</td></tr>
+        <tr><td><strong>Occupancy</strong></td><td>47%</td><td>Property data</td></tr>
+        <tr><td><strong>ADR</strong></td><td>SAR 1,100</td><td>Booking.com / MakeMyTrip published rates</td></tr>
+        <tr><td><strong>RevPAR</strong></td><td>SAR 517</td><td>47% &times; SAR 1,100</td></tr>
+        <tr><td><strong>Annual Room Revenue</strong></td><td>~SAR 7.5M</td><td>40 rooms &times; 365 days &times; 47% &times; SAR 1,100</td></tr>
+        <tr><td><strong>Reputation</strong></td><td>6.8/10</td><td>Booking.com verified</td></tr>
+      </tbody>
+    </table>
+
+    <h3>8.2 Projected Hotel Performance (Month 9&ndash;12)</h3>
+
+    <h4>Conservative Scenario</h4>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Target</th><th style="text-align:center">Delta</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Occupancy</strong></td><td>47%</td><td>62%</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+15 ppts</td></tr>
+        <tr><td><strong>ADR</strong></td><td>SAR 1,100</td><td>SAR 650</td><td style="text-align:center">-41% (strategic repositioning)</td></tr>
+        <tr><td><strong>RevPAR</strong></td><td>SAR 517</td><td>SAR 403</td><td style="text-align:center">-22% (volume rebuild)</td></tr>
+        <tr><td><strong>Annual Room Rev.</strong></td><td>SAR 7.5M</td><td>SAR 5.9M</td><td style="text-align:center">Revenue trades for volume + reputation</td></tr>
+        <tr><td><strong>Reputation</strong></td><td>6.8/10</td><td>8.0/10</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+1.2</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Optimistic Scenario</h4>
+    <table>
+      <thead><tr><th>Metric</th><th>Current</th><th>Target</th><th style="text-align:center">Delta</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Occupancy</strong></td><td>47%</td><td>72%</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+25 ppts</td></tr>
+        <tr><td><strong>ADR</strong></td><td>SAR 1,100</td><td>SAR 750</td><td style="text-align:center">-32% (justified by quality)</td></tr>
+        <tr><td><strong>RevPAR</strong></td><td>SAR 517</td><td>SAR 540</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+4%</td></tr>
+        <tr><td><strong>Annual Room Rev.</strong></td><td>SAR 7.5M</td><td>SAR 7.9M</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+5%</td></tr>
+        <tr><td><strong>Reputation</strong></td><td>6.8/10</td><td>8.2+/10</td><td style="text-align:center; color: var(--dv-green); font-weight:700">+1.4</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout callout-strategy">
+      <strong>ADR STRATEGY: PRICE BELOW COMPETITORS TO REBUILD</strong>
+      The SAR 650&ndash;750 target ADR deliberately positions Sunset Beach <strong>slightly below</strong> competitors (Grand Hyatt SAR 680+, M&ouml;venpick SAR 475&ndash;900, Sofitel SAR 525&ndash;630). In the short term, room revenue may decrease. But the strategy trades inflated rates for volume, reviews, and reputation &mdash; the foundations that enable future pricing power. Once the Booking.com score reaches 8.0+, rate escalation becomes organic.
+    </div>
+
+    <h3>8.3 Total Resort-Level Impact</h3>
+    <p>Beyond the 40-key hotel, the resort includes villas, marina, F&B venues, events spaces, and beach facilities. The operational rejuvenation lifts <strong>all revenue streams</strong>:</p>
+    <table>
+      <thead><tr><th>Revenue Stream</th><th style="text-align:right">Current (Est.)</th><th style="text-align:right">Post-Rejuvenation</th><th style="text-align:center">Driver</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Hotel rooms (40 keys)</strong></td><td style="text-align:right">SAR 7.5M</td><td style="text-align:right">SAR 5.9M&ndash;7.9M</td><td style="text-align:center">ADR correction + occupancy gain</td></tr>
+        <tr><td><strong>F&B (new concepts)</strong></td><td style="text-align:right">SAR 1.5M</td><td style="text-align:right">SAR 2.5M&ndash;3.5M</td><td style="text-align:center">Beach dining, events, breakfast overhaul</td></tr>
+        <tr><td><strong>Events &amp; activations</strong></td><td style="text-align:right">SAR 0.3M</td><td style="text-align:right">SAR 1.0M&ndash;1.5M</td><td style="text-align:center">Corporate retreats, Sunset Sessions, seasonal</td></tr>
+        <tr><td><strong>Marina &amp; ancillary</strong></td><td style="text-align:right">SAR 0.5M</td><td style="text-align:right">SAR 0.8M&ndash;1.2M</td><td style="text-align:center">Reactivated amenities, upsell systems</td></tr>
+        <tr class="highlight-row"><td><strong>Total Resort Revenue</strong></td><td style="text-align:right"><strong>~SAR 9.8M</strong></td><td style="text-align:right"><strong>SAR 10.2M&ndash;14.1M</strong></td><td style="text-align:center"><strong>+4% to +44%</strong></td></tr>
+      </tbody>
+    </table>
+
+    <h3>8.4 EBITDA &amp; Asset Valuation Impact</h3>
+    <table>
+      <thead><tr><th>Scenario</th><th style="text-align:right">EBITDA Improvement</th><th style="text-align:right">Asset Value Uplift (9% cap)</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Conservative</strong></td><td style="text-align:right; font-weight:700; color: var(--dv-green)">SAR 1.5M&ndash;2.5M</td><td style="text-align:right; font-weight:700; color: var(--dv-green)">SAR 17M&ndash;28M</td></tr>
+        <tr><td><strong>Optimistic</strong></td><td style="text-align:right; font-weight:700; color: var(--dv-green)">SAR 3.0M&ndash;4.5M</td><td style="text-align:right; font-weight:700; color: var(--dv-green)">SAR 33M&ndash;50M</td></tr>
+      </tbody>
+    </table>
+
+    <div class="metrics-strip">
+      <div class="metric-card">
+        <div class="value green">SAR 17&ndash;50M</div>
+        <div class="label">Asset Value Uplift Range</div>
+      </div>
+      <div class="metric-card">
+        <div class="value blue">~SAR 1.4M</div>
+        <div class="label">CAPEX Required</div>
+      </div>
+      <div class="metric-card">
+        <div class="value green">12&ndash;36x</div>
+        <div class="label">Investment Multiple</div>
+      </div>
+      <div class="metric-card">
+        <div class="value green">8.0+</div>
+        <div class="label">Target Booking.com</div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 9. SOPHOS + DOLCEVITA ───── -->
+    <h2 class="section-number">9. Sophos Hotels + DolceVita Hospitality: Strategic Partnership</h2>
+
+    <h3>9.1 Why This Partnership &mdash; Not Just Any Operator</h3>
+    <p>The Sunset Beach rejuvenation requires a specific combination of capabilities that neither a traditional hotel management company nor a single consulting firm can deliver alone:</p>
+    <ul>
+      <li><strong>International operational rigor</strong> (systems, governance, P&L discipline)</li>
+      <li><strong>Luxury guest experience DNA</strong> (emotional hospitality, service culture, luxury positioning)</li>
+      <li><strong>Saudi market knowledge</strong> (regulatory, cultural, labor market, seasonal patterns)</li>
+      <li><strong>Speed of deployment</strong> (the "30-day stabilization" commitment)</li>
+    </ul>
+    <p>The Sophos + DolceVita partnership uniquely delivers all four.</p>
+
+    <h3>9.2 Sophos Hotels Contribution</h3>
+    <p><strong>Profile:</strong> Swiss hotel management company (est. 2006), 40+ hotels globally, partnerships with Marriott, Hilton, Hyatt, Wyndham. Dedicated Saudi Arabia team led by Edward Sirrieh (MD KSA, 25 years experience) and Raji Abou Ghanem (Operations Director KSA).</p>
+    <table>
+      <thead><tr><th>Capability</th><th>Application to Sunset Beach</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Operational systems</strong></td><td>Proven SOPs, quality standards, and playbooks deployed across 40+ properties</td></tr>
+        <tr><td><strong>Revenue management</strong></td><td>Dynamic pricing, channel management, demand forecasting</td></tr>
+        <tr><td><strong>Software infrastructure</strong></td><td>PMS, CRM, channel manager, reputation management platform</td></tr>
+        <tr><td><strong>Governance & KPI control</strong></td><td>Weekly/monthly ownership reporting, financial controls, variance analysis</td></tr>
+        <tr><td><strong>Saudi regulatory</strong></td><td>MOMRA, SCTA, labor regulations, Saudization, Eastern Province business culture</td></tr>
+        <tr><td><strong>Brand relationships</strong></td><td>Pathway to future Marriott, Hilton, or luxury brand affiliation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>9.3 DolceVita Hospitality Contribution</h3>
+    <p><strong>Profile:</strong> Milan-based luxury hospitality consulting firm operating in Italy and Saudi Arabia. Specializes in transforming hotel operations through the integration of European luxury standards with local market needs.</p>
+    <table>
+      <thead><tr><th>Capability</th><th>Application to Sunset Beach</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Guest experience engineering</strong></td><td>Redesigning the complete guest journey with luxury hospitality principles</td></tr>
+        <tr><td><strong>Staff training methodology</strong></td><td>90-day "DolceVita Method" &mdash; behavioral coaching and procedural training</td></tr>
+        <tr><td><strong>Service culture transformation</strong></td><td>From "maintenance culture" to "hospitality culture" &mdash; anticipate and delight</td></tr>
+        <tr><td><strong>Brand perception</strong></td><td>Repositioning from "outdated 5-star" to "authentic coastal luxury"</td></tr>
+        <tr><td><strong>Luxury positioning</strong></td><td>"Made in Italy" service design combined with "Made in Swiss" operational precision</td></tr>
+        <tr><td><strong>F&B concepts</strong></td><td>Potentially add signature Italian restaurant concept, beach dining concept, and sunset bar as destination drivers during investment phase</td></tr>
+      </tbody>
+    </table>
+
+    <h3>9.4 Asset Value Reframing</h3>
+
+    <div class="ba-grid">
+      <div class="ba-col-header ba-before-header">Before (Current State)</div>
+      <div class="ba-col-header ba-after-header">After (Operations-First Intervention)</div>
+      <div class="ba-cell ba-before">"Underperforming asset requiring SAR 2.26B reconstruction"</div>
+      <div class="ba-cell ba-after">"Stabilized luxury resort with proven cash flows and SAR 2.26B upside potential"</div>
+      <div class="ba-cell ba-before">Booking.com 6.8/10 &mdash; signals distress</div>
+      <div class="ba-cell ba-after">Booking.com 7.8&ndash;8.2/10 &mdash; signals competence</div>
+      <div class="ba-cell ba-before">Investor question: "Why is it underperforming?"</div>
+      <div class="ba-cell ba-after">Investor statement: "Operations are solid; redevelopment unlocks more"</div>
+      <div class="ba-cell ba-before">Risk: Full CAPEX on unproven demand</div>
+      <div class="ba-cell ba-after">De-risked: Performance PROVES demand before CAPEX</div>
+      <div class="ba-cell ba-before">Negotiation: Distressed asset pricing</div>
+      <div class="ba-cell ba-after">Negotiation: Performing asset with development upside</div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ───── 10. NEXT STEPS ───── -->
+    <h2 class="section-number">10. Next Steps & Key Takeaways</h2>
+
+    <div class="tp-box">
+      <h4>Key Takeaways</h4>
+
+      <div class="tp-item"><span class="tp-number">1</span><p><strong>The asset's location is its moat</strong> &mdash; private peninsula, private beach, marina, 7 km to Bahrain Causeway. No competitor in the Eastern Province has this combination. This advantage is permanent and cannot be replicated.</p></div>
+
+      <div class="tp-item"><span class="tp-number">2</span><p><strong>The reputation must be fixed before anything else</strong> &mdash; Booking.com 6.8/10, TripAdvisor #41 of 110. At SAR 1,100/night, the resort charges Grand Hyatt prices (8.9/10) while delivering a 3-star experience. No redevelopment plan succeeds on a weak operational foundation.</p></div>
+
+      <div class="tp-item"><span class="tp-number">3</span><p><strong>Operations first de-risks the entire investment</strong> &mdash; Managing the property for 9&ndash;12 months provides real data to size future investment accurately. Perhaps SAR 2.26B is not needed &mdash; perhaps less achieves the same result. This phase replaces assumptions with confidence.</p></div>
+
+      <div class="tp-item"><span class="tp-number">4</span><p><strong>Operators who know the property make better investment plans</strong> &mdash; A consulting firm designing a masterplan from assumptions is not the same as an operating team that has spent 12 months understanding demand, guest profiles, revenue patterns, and physical constraints first-hand.</p></div>
+
+      <div class="tp-item"><span class="tp-number">5</span><p><strong>The right partnership is ready</strong> &mdash; Sophos Hotels (Swiss operational precision, 40+ hotels, Saudi team) + DolceVita Hospitality (service culture transformation, 90-day deployment) deliver both the systems backbone and the guest experience DNA this asset needs.</p></div>
+
+      <h4 style="margin-top: 24px;">The Proposal</h4>
+      <p>"Authorize a 180-day operational rejuvenation program. Investment: SAR 1M&ndash;1.5M CAPEX-light improvements + management/consulting fees. Expected return: Booking.com 6.8 &rarr; 8.0+, occupancy ~47% &rarr; 55&ndash;65%, and a credible operating platform that makes the redevelopment case 10x stronger."</p>
+
+      <h4 style="margin-top: 24px;">The Close</h4>
+      <p><em>"The redevelopment vision is the destination. This operational program is the bridge that gets us there &mdash; with proof, lower risk, and confidence."</em></p>
+    </div>
+
+    <br>
+    <p style="text-align: center; color: var(--dv-text-light); font-size: 11px; margin-top: 24px;">
+      <strong>Sources:</strong> FAMA Holdings Investment Teaser (Nov 2025) &bull; Booking.com &bull; TripAdvisor &bull; Google Maps &bull; Sophos Hotels SA &bull; DolceVita Hospitality &bull; STR Middle East Market Intelligence
+    </p>
+
+  </div><!-- /content -->
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="doc-footer">
+    <div class="footer-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 823.17 421.28">
+        <g>
+          <path class="cls-1" d="M151.31,349.51h-.18c-27.92.03-43.94,13.1-43.94,35.88s16.04,35.88,44.03,35.88,44.02-13.08,44.02-35.88-16.01-35.85-43.93-35.88ZM151.22,412.1c-19.75,0-32.5-10.48-32.5-26.71s12.75-26.52,32.5-26.52,32.15,10.41,32.15,26.52-12.32,26.71-32.15,26.71Z"/>
+          <polygon class="cls-1" points="284.16 411.17 235.94 411.17 235.94 350.98 224.77 350.98 224.77 419.82 233.86 419.86 284.16 419.86 284.16 411.17"/>
+          <path class="cls-1" d="M351.24,358.72c17.9,0,25.05,7.94,27.85,15.13h11.34c-2.75-15.49-16.88-24.32-39.14-24.34h-.14c-27.62.03-44.11,13.51-44.11,36.06s16.12,35.71,44.2,35.71c22.56,0,36.36-8.45,39.14-23.86h-11.33c-2.81,7.13-9.96,15.01-27.81,15.01-20.43,0-32.63-10.04-32.63-26.86s12.2-26.85,32.63-26.85Z"/>
+          <polygon class="cls-1" points="550.89 413.55 524.77 350.98 512.39 350.98 542.77 419.81 559 419.81 589.11 350.98 577.01 350.98 550.89 413.55"/>
+          <polygon class="cls-1" points="776.56 350.98 746.45 419.82 758.55 419.82 784.68 357.23 810.79 419.82 823.17 419.82 792.78 350.98 776.56 350.98"/>
+          <rect class="cls-1" x="618.02" y="350.98" width="11.17" height="68.83"/>
+          <polygon class="cls-1" points="687.94 419.81 699.11 419.81 699.11 366.27 687.94 377.44 687.94 419.81"/>
+          <polygon class="cls-1" points="657.11 359.84 692.27 359.84 700.22 359.84 702.89 359.84 716.23 359.84 729.94 359.84 729.94 350.98 657.11 350.98 657.11 359.84"/>
+          <path class="cls-1" d="M39.65,350.98H0v9.18h39.29c24.44,0,29.56,13.59,29.56,25,0,9.51-3.84,25.46-29.56,25.46H11.17v-44.03l-11.17,11.17v42.05h39.65c25.84,0,40.66-12.63,40.66-34.65s-13.68-34.18-40.66-34.18Z"/>
+          <polygon class="cls-1" points="431.42 399.84 431.42 389.74 487.33 389.74 487.33 381.05 431.42 381.05 431.42 359.66 487.33 359.66 487.33 350.98 431.42 350.98 420.25 350.98 420.25 419.82 487.47 419.82 487.47 411.13 431.42 411.13 431.42 399.84"/>
+          <polygon class="cls-1" points="388.33 188.04 303.66 130.5 303.66 172.51 357.42 209.04 388.33 188.04"/>
+          <polygon class="cls-1" points="503.57 109.34 503.57 67.33 411.58 129.85 319.6 67.33 319.6 109.34 411.58 171.86 503.57 109.34"/>
+          <polygon class="cls-1" points="476.32 54.1 476.32 12.09 411.58 56.09 346.84 12.09 346.84 54.1 411.59 98.1 476.32 54.1"/>
+          <polygon class="cls-1" points="519.51 172.51 519.51 130.5 434.84 188.04 465.74 209.04 519.51 172.51"/>
+          <polygon class="cls-1" points="442.48 224.85 411.58 203.84 380.68 224.85 411.59 245.85 442.48 224.85"/>
+          <polygon class="cls-1" points="425.45 17.27 411.58 0 397.72 17.27 411.58 26.7 425.45 17.27"/>
+        </g>
+      </svg>
+    </div>
+    <div class="footer-text">
+      &copy; 2022&ndash;2026 DolceVita Hospitality Srl, Via Larga N. 8, 20122 Milano, Italia. All Rights Reserved.
+    </div>
+  </footer>
+
+</div><!-- /document-wrapper -->
+
+</body>
+</html>
